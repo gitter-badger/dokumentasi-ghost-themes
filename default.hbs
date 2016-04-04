@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta name="author" content="Fariz Rizaldy">
+  <meta name="description" content="Dokumentasi is a Ghost Themes for your Application's Documentation. It's builded for Ghost with Foundation as Front-end Framework">
+  <meta name="keywords" content="Documentation, Responsive, Foundation, Ghost Themes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{@blog.title}} - {{@blog.description }}</title>
+  <link rel="stylesheet" href="{{ asset "bower_components/app/stylesheets/screen.css"}}">
+  {{#if @blog.logo}}<link rel="shortcut icon" href="{{ @blog.logo }}">{{/if}}
+</head>
+
+<body>
+
+  <header class="site-header" {{#if @blog.cover}}style="margin-top: -3%; padding-top: 10%; background-attachment: fixed; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <h1><a href="{{@blog.url}}">{{ @blog.title }}</a></h1>
+    <h3>{{ @blog.description }}</h3>
+  </header>
+
+  <div class="large-collapse" id="site-layout">
+    <div class="small-12 large-4 columns">
+      <h5>Documentation</h5>
+      {{#get "posts" order="published_at asc"}}{{>"loop"}} {{/get}}
+    </div>
+
+    <div class="small-12 large-8 columns" id="post-area">
+      {{#is "post"}}
+        {{>"post"}}
+      {{else}}
+      <h5>{{ @blog.title }}</h5>
+      <p>Welcome to {{ @blog.title}}, this is our Official Documentation websites. Please, click a <span class="underline">Getting Started</span> link in Navigation to Getting Started. Thanks.</p>
+      {{/is}}
+    
+      <!-- this is a post content, below Post Content there is a breadcumb: /{{@blog.title}}/{{tags}}/{{post_title}}/ -->
+    </div>
+  </div>
+
+<script src="{{ asset "bower_components/js/jquery.js" }}"></script>
+<script src="{{ asset "bower_components/js/foundation.min.js" }}"></script>
+<script src="{{ asset "bower_components/js/modernizr.js" }}"></script>
+<script src="{{ asset "bower_components/js/fastclick.js" }}"></script>
+</body>
+</html>  

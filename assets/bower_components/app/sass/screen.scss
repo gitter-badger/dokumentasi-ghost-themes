@@ -1,0 +1,51 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "../../foundation/scss/foundation.scss";
+@import "../../foundation/scss/normalize.scss";
+
+$baseColor: #ccc;
+$fontColor: #333;
+
+header.site-header{
+  text-align: center;
+  font-size: 120%;
+  height: 60%;
+  border-bottom: 4px solid $baseColor;
+  margin-bottom: 2%;
+  h1, h3{
+    color: white;
+  }
+}
+
+span.underline{
+  border-bottom: 2px solid $baseColor;
+}
+
+div.documentation-title{
+  li{
+   border-bottom: 1px dotted $baseColor;
+   
+    a, a:hover{ color: $fontColor; }
+  }
+  li:hover{
+   background: $baseColor;
+   color: $fontColor;
+  }
+}
+
+#post-area{
+  p{
+    text-align: justify;
+  }
+}
+
+a{
+  color: #ccc;
+  &:hover{
+    color: #333;
+  }
+}

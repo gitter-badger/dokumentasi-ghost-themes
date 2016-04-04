@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+              
+<article class="{{post_class}}">
+  <header class="post-header">
+    <p><em><a href="{{@blog.url}}">{{@blog.title}}</em></a> > {{#if tags}}{{#foreach tags}} <a href="{{url}}"><span class="underline">{{name}}</span></a>{{/foreach}}{{else}}<strong>No Tags</strong>{{/if}} > <a href="{{url}}"><strong class="underline">{{title}}</strong></a>
+    <h1 class="post-title">{{title}}</h1>
+    <section class="post-meta">
+      <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+       <p><span class="underline"> Published on: {{date format="DD MMMM YYYY"}}
+      </time> 
+     {{tags prefix=" in "}}</span>
+      </p>
+    </section>  
+  </header>
+  <section class="post-content">
+    {{content}}
+  </section>     
+</article>
+
+{{/post}} 
