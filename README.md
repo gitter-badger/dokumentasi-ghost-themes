@@ -1,5 +1,7 @@
 ### Welcome
 
+[![Join the chat at https://gitter.im/farizdev/dokumentasi-ghost-themes](https://badges.gitter.im/farizdev/dokumentasi-ghost-themes.svg)](https://gitter.im/farizdev/dokumentasi-ghost-themes?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Hi, welcome to Dokumentasi. If you build something cool in Application, and especially your Application is Open Source, this themes is Suitable for your project.
 
 This theme is totally **free** and **Open Source**, here is Technology Stacks:
